@@ -1,0 +1,70 @@
+.Weather {
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
+    margin: 20px 0;
+    max-width: 630px;
+    padding: 20px 24px 24px;
+    background-color: lightgrey;
+  }
+  
+  .Weather .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .Weather button {
+    margin-left: 5px;
+    position: relative;
+  }
+  
+  .Weather .current-weather {
+    margin-top: 20px;
+  }
+  
+  .Weather .current-weather img {
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+  }
+  
+  .Weather .weather-icon {
+    margin-top: 5px;
+    float: left;
+    font-size: 64px;
+    color: #fda403;
+    line-height: 1;
+    padding-left: 10px;
+  }
+  
+  .Weather .weather {
+    color: #333;
+    float: left;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  
+  .Weather .current-temp {
+    color: #333;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 5px;
+    margin-top: 15px;
+  }
+  
+  .Weather .card {
+    margin-left: 10px;
+  }
+  
