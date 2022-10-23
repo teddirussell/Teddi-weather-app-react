@@ -8,6 +8,7 @@ export default function Git() {
         <a
           href="https://github.com/teddirussell/teddi-weather-app-react"
           target="_blank"
+          rel="noreferrer"
         >
           Open Source Code
         </a>{" "}
