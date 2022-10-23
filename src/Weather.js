@@ -1,7 +1,5 @@
 import React from "react";
 import "./Weather.css";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 import axios from "axios";
 
