@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather";
 import Git from "./Git";
 
+import "bootstrap/dist/css/bootstrap.css";
+
 import "./Weather.css";
 import "./App.css";
 
