@@ -1,5 +1,7 @@
 import React from "react";
 
+import "bootstrap/dist/css/bootstrap.css";
+
 export default function FormattedDate(props) {
   let days = [
     "Sunday",
