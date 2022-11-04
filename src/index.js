@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Weather from "./Weather";
 import Git from "./Git";
+import App from "./App";
 
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -15,10 +16,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <div className="App">
-    <Weather defaultCity="New York" />
+    <App />
       <Weather />
       <Git />
-    </div>
   </StrictMode>
 );
