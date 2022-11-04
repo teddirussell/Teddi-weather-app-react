@@ -71,35 +71,9 @@ export default function Weather(props) {
         </div>
       </form>
 
-      <div className="current-weather">
-        <h1>{weatherData.city}</h1>
-        <h2>{weatherData.date}</h2>
-        <h3>{weatherData.condition}</h3>
-
-        <div className="row">
-          <div className="col-6">
-            <div className="d-flex current-weather">
-              <img
-                src={weatherData.imgUrl}
-                alt={weatherData.description}
-                className="float-left"
-              />
-              <div className="float-left">
-                <h2 className="weather">{weatherData.temperature}</h2>
-                <sub className="current-temp"> &deg;C</sub>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <p>
-              Humidity: <span>{weatherData.humidity}</span>%
-              <br />
-              Wind: <span>{weatherData.wind}</span> km/h
-            </p>
-          </div>
-        </div>
+      <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
-    </div>
      );
     } else {
       search();
