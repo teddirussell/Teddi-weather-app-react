@@ -1,20 +1,46 @@
 import React from "react";
+import axios from "axios";
+
 import "./Weather.css";
 
-export default function Weather() {
-  let weatherData = {
-    city: "New York",
-    temperature: 19,
-    date: "Tuesday 10:00",
-    condition: "Cloudy",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: 80,
-    wind: 10
-  };
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
+  function handleResponse(response) {
+    setWeatherData({
+      ready: true,
+      coordinates: response.data.coord,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+  const apiKey = "c9990719b68fb3b69a357ef1e3379959";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  
+
+  if (weatherData.ready) {
   return (
     <div className="Weather">
-      <form className="mb-3">
+      <form className="mb-3" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-6">
             <input
@@ -22,6 +48,7 @@ export default function Weather() {
               placeholder="Type a city.."
               className="form-control"
               autoComplete="off"
+              onChange={handleCityChange}
             />
           </div>
           <div className="col-3">
@@ -70,5 +97,9 @@ export default function Weather() {
         </div>
       </div>
     </div>
-  );
-}
+     );
+    } else {
+      search();
+      return "Loading...";
+    }
+  }
