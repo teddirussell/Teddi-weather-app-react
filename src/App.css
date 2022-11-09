@@ -13,3 +13,7 @@ body {
 h1 {
   color: #000;
 }
+
+.App footer {
+  font-size: 12px;
+  }
