@@ -8,16 +8,18 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
+      <div className="row">
       <h1>{props.data.city}</h1>
      <h2><FormattedDate date={props.data.date} /></h2>
           
         <h3 className="text-capitalize">{props.data.description}</h3>
-
+        <br />
+        </div>
         <div className="row">
   <div className="col-6">
     <div className="d-flex current-weather">
-            <div>
-              <WeatherIcon code={props.data.icon} size={52} className="float-left" />
+            <div className="WeatherIconMain">
+              <WeatherIcon code={props.data.icon} size={64} className="float-left" />
             </div>
 
             <div className="float-left">
