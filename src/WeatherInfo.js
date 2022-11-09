@@ -28,8 +28,8 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className="col-6">
-        <p className="unit">Humidity: {props.data.humidity}%</p>
-        <p className="unit">Wind: {props.data.wind} km/h</p>
+        <p className="unit">Humidity: <span className="Humidity">{props.data.humidity}%</span></p>
+        <p className="unit">Wind: <span className="Wind">{props.data.wind} km/h</span></p>
         </div>
       </div>
     </div>
