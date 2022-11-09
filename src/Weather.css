@@ -30,12 +30,7 @@
     margin-top: 20px;
   }
   
-  .Weather .WeatherInfo img {
-    margin-right: 5px;
-    height: 64px;
-    width: 64px;
-  }
-  
+ 
  
   .Weather .temperature {
     color: #333;
@@ -47,13 +42,14 @@
     padding-top: 5px;
   }
   
-  .Weather .unit {
+  .WeatherInfo .unit {
     color: #333;
     float: left;
     font-size: 20px;
     font-weight: 400;
     padding-left: 5px;
-    margin-top: 15px;
+    line-height: 1;
+    margin-bottom: 10px;
   }
   
   .Weather .card {
